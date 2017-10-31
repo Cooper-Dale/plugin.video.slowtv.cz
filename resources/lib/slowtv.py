@@ -29,7 +29,7 @@ from provider import ContentProvider
 class SlowTVContentProvider(ContentProvider):
 
     def __init__(self,username=None,password=None,filter=None):
-        ContentProvider.__init__(self,'playtvak.cz','http://generix.idnes.cz/generatory/playtvak/slowtvxml.aspx',username,password,filter)
+        ContentProvider.__init__(self,'playtvak.cz','https://slowtv.playtvak.cz/rss.aspx',username,password,filter)
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookielib.LWPCookieJar()))
         urllib2.install_opener(opener)
 
